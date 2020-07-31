@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 
 
-type avatarSize = 'large'| 'medium'| 'small'
+export type avatarSize = 'large'| 'medium'| 'small'
 
 interface avatarProps{
     size: avatarSize;
