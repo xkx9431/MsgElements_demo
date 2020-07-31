@@ -1,0 +1,31 @@
+.msg-avatar-generic {
+    display: flex;
+    overflow: hidden;
+    border-radius: $avatar_border_radius;
+    cursor: pointer;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+}
+
+.msg-avatar-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.avatar-size-large {
+    height: $avatar_large_size;
+    width: $avatar_large_size;
+}
+
+.avatar-size-medium {
+    height: $avatar_medium_size;
+    width: $avatar_medium_size;
+}
+
+.avatar-size-small {
+    height: $avatar_small_size;
+    width: $avatar_small_size;
+}
