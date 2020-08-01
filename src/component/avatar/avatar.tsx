@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC,MouseEvent} from 'react';
 
 
 export type avatarSize = 'large'| 'medium'| 'small'
@@ -8,7 +8,7 @@ interface avatarProps{
     className ?: string;
     src ?: string;
     alt ?:string;
-    onAvatarClick ?: any;
+    onAvatarClick?(e : MouseEvent<HTMLElement> ) : void;
 }
 
 export const Avatar: FC<avatarProps> = (props) => {
@@ -16,13 +16,13 @@ export const Avatar: FC<avatarProps> = (props) => {
         size,
         src,
         alt,
-        onAvatarClick
+        onAvatarClick,
     } = props
 
     const sizeClass = `avatar-size-${size}`
 
     return (
-        <button className={'msg-avatar-generic ' + sizeClass} onClick={( e ) => onAvatarClick( e )}>
+        <button className={'msg-avatar-generic ' + sizeClass}  onClick={ onAvatarClick ?  onAvatarClick : e=>e.preventDefault()}>
             <img src={src} alt={alt} className='msg-avatar-image'></img>;
         </button>
     );
