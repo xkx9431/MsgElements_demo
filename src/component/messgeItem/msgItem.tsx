@@ -7,7 +7,7 @@ import Avatar, { avatarSize } from '../avatar/avatar';
 
 interface MessageItemProps{
     avatar: boolean,
-    avatarSrc:string,
+    avatarSrc?:string,
     avatarPositionClass ?: string ,
     avatarSize ?: avatarSize,
     MessageContentProps:Partial<MessageContentProps> 

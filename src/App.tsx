@@ -1,4 +1,4 @@
-import React, { } from 'react';
+import React, { MouseEvent } from 'react';
 
 import Avatar from  './component/avatar'
 import MessageItem from './component/messgeItem'
@@ -9,26 +9,50 @@ import { msgType } from './component/messgeItem/msgContent';
 //   avatarSize ,
 //   MessageContentProps
 // } = props
-const testMessageItemProps1 = {
+const textMessageItemProps1 = {
   avatar:true,
   avatarPositionClass:'message-item-sended',
   avatarSrc:'https://xkx9431.github.io/xkx_blog/img/xkx_eye_photo.jpg',
   MessageContentProps:{
     msgType: 'text' as msgType,
-    text:'hello man , this is the first draft version of msg elements, and this is a text message',
+    text:'hello man , this is the first draft version of msg elements, and this is a sended text message ',
     handleClick : () => console.log( ' clicked text msg')
   }
 }
-const testMessageItemProps2 = {
+const textMessageItemProps2 = {
   avatar:true,
   avatarPositionClass:'message-item-recieved',
   avatarSrc:'https://xkx9431.github.io/xkx_blog/img/xkx_eye_photo.jpg',
   MessageContentProps:{
     msgType: 'text' as msgType,
-    text:'hello man , this is the first draft version of msg elements, and this is a text message',
+    text:'hello man , this is the first draft version of msg elements, and this is a recieved text message',
     handleClick : () => console.log( ' clicked text msg')
   }
 }
+
+const systemMessageItemProps = {
+  avatar:false,
+  MessageContentProps:{
+    msgType: 'system' as msgType,
+    systemMsg:'hello man , this is the first draft version of msg elements, and this is a system message',
+  }
+}
+
+const photoMessageItemProps = {
+  avatar:true,
+  avatarPositionClass:'message-item-recieved',
+  avatarSrc:'https://xkx9431.github.io/xkx_blog/img/xkx_eye_photo.jpg',
+  MessageContentProps:{
+    msgType: 'photo' as msgType,
+    src : 'https://xkx9431.github.io/xkx_blog/img/xkx_eye_photo.jpg',
+    alt : 'this is a photo alt',
+    handleClick: (e: MouseEvent<HTMLElement>)=>{
+      e.preventDefault();
+      alert( 'please verify, then download!!!!' );
+    }
+  }
+}
+
 
 function App() {
   return (
@@ -41,7 +65,7 @@ function App() {
       <div className="avatar">
 
         <br/>
-        Size medium
+        Avatar Size medium
         <Avatar size= { 'medium'}
           src = { 'https://xkx9431.github.io/xkx_blog/img/xkx_eye_photo.jpg' }
           alt = {'sample avatar'}
@@ -52,10 +76,28 @@ function App() {
 
       <div className="message">
         text message (sended)
-        <MessageItem {...testMessageItemProps1}/>
+        <MessageItem {...textMessageItemProps1}/>
         <br/>
         text message (recieved)
-        <MessageItem {...testMessageItemProps2}/>
+        <MessageItem {...textMessageItemProps2}/>
+        <br/>
+        text message (sended)
+        <MessageItem {...textMessageItemProps1}/>
+        <br/>
+        text message (recieved)
+        <MessageItem {...textMessageItemProps2}/>
+        <br/>
+        text message (sended)
+        <MessageItem {...textMessageItemProps1}/>
+        <br/>
+        text message (recieved)
+        <MessageItem {...textMessageItemProps2}/>
+        <br/>
+        system 
+        <MessageItem {...systemMessageItemProps}/>
+        <br/>
+        photo (recieved)
+        <MessageItem {...photoMessageItemProps}/>
         <br/>
       </div>
 

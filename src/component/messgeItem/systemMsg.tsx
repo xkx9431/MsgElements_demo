@@ -1,20 +1,20 @@
-import React, {FC,MouseEvent} from 'react';
+import React, {FC,MouseEvent,useState} from 'react';
 
 
 
 export interface systemMessageProps{
-  text?:string;
-  handleClick (e : MouseEvent<HTMLElement> ) : void
+  systemMsg:string;
+  handleClick? (e : MouseEvent<HTMLElement> ) : void
 }
 
 export const SystemMessage: FC<systemMessageProps> = (props) => {
   const {
-    text,
-    handleClick
+    systemMsg
   } = props
+  const [ systemInfo, setSystemInfo] =  useState( systemMsg|| 'system info' )
     return (
-      <div className = 'system-msg-container' onClick = { handleClick} >
-        { text }
+      <div className = 'system-msg-container' onClick = { e =>{ e.preventDefault();setSystemInfo( 'this system info has been read !')} } >
+        <p>{ systemInfo }</p>
       </div>
     )
 }
