@@ -29,3 +29,9 @@
     height: $avatar_small_size;
     width: $avatar_small_size;
 }
+
+.avatar-container{
+    display: block;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}

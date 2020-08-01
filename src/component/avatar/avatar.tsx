@@ -22,9 +22,12 @@ export const Avatar: FC<avatarProps> = (props) => {
     const sizeClass = `avatar-size-${size}`
 
     return (
-        <button className={'msg-avatar-generic ' + sizeClass}  onClick={ onAvatarClick ?  onAvatarClick : e=>e.preventDefault()}>
+        <div className="avatar-container">
+                    <button className={'msg-avatar-generic ' + sizeClass}  onClick={ onAvatarClick ?  onAvatarClick : e=>e.preventDefault()}>
             <img src={src} alt={alt} className='msg-avatar-image'></img>;
         </button>
+        </div>
+
     );
 }
 

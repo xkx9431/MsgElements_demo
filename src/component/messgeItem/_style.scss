@@ -1,4 +1,26 @@
+.message-item-container{
+  display: flex;
+  .avatar-container{
+    align-self: flex-end;
+    margin-bottom: 8px;
+  }
+}
+
+
 .text-msg-container{
-  font-size: medium;
+  background-color:greenyellow ;
+  font-size: 14px;
+  font-weight: 500;
   word-break: break-word;
+  min-height: fit-content;
+  padding: 10px 10px;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.message-item-sended{
+  flex-direction: row-reverse;
+}
+.message-item-recieved{
+  flex-direction: row
 }

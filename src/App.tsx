@@ -9,9 +9,19 @@ import { msgType } from './component/messgeItem/msgContent';
 //   avatarSize ,
 //   MessageContentProps
 // } = props
-const testMessageItemProps = {
+const testMessageItemProps1 = {
   avatar:true,
-  avatarPostion:'right',
+  avatarPositionClass:'message-item-sended',
+  avatarSrc:'https://xkx9431.github.io/xkx_blog/img/xkx_eye_photo.jpg',
+  MessageContentProps:{
+    msgType: 'text' as msgType,
+    text:'hello man , this is the first draft version of msg elements, and this is a text message',
+    handleClick : () => console.log( ' clicked text msg')
+  }
+}
+const testMessageItemProps2 = {
+  avatar:true,
+  avatarPositionClass:'message-item-recieved',
   avatarSrc:'https://xkx9431.github.io/xkx_blog/img/xkx_eye_photo.jpg',
   MessageContentProps:{
     msgType: 'text' as msgType,
@@ -41,9 +51,12 @@ function App() {
       </div>
 
       <div className="message">
-        <MessageItem {...testMessageItemProps}>
-
-        </MessageItem>
+        text message (sended)
+        <MessageItem {...testMessageItemProps1}/>
+        <br/>
+        text message (recieved)
+        <MessageItem {...testMessageItemProps2}/>
+        <br/>
       </div>
 
       </div>
