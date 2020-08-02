@@ -1,5 +1,5 @@
 //
-import React, {FC, CSSProperties } from 'react';
+import React, {FC } from 'react';
 import MessageItem from '../messgeItem'
 import{ MessageItemProps }  from '../messgeItem/msgItem'
 
@@ -22,11 +22,9 @@ const MessagePanel: FC<MessagePanelProps>  = ( props ) =>{
     width,
   } = props
 
-  const styles = `{height: ${height} ,width: ${width}}` as CSSProperties
-
   const directionClass = direction === 'vertical' ?  'msg-panel-vertical' : 'msg-panel-horizontal';
   return (
-    <div className={"msg-panel-contianer " + directionClass } >
+    <div className={"msg-panel-container " + directionClass } style={{ height: height ,width: width }} >
       {
         dataSource.map( (itemProps,index) =>(
           <div key = { index } className = 'msg-item'  > 

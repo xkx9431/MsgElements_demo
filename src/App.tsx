@@ -10,7 +10,7 @@ import MessagePanel from './component/messagePanel'
 const textMessageItemProps1 = {
   avatar:true,
   avatarPositionClass:'message-item-sended',
-  avatarSrc:'https://xkx9431.github.io/xkx_blog/img/xkx_eye_photo.jpg',
+  avatarSrc:'https://xkx9431.github.io/xkx_blog/img/asserts/dog.128.jpg',
   MessageContentProps:{
     msgType: 'text' as msgType,
     text:'hello man , this is the first draft version of msg elements, and this is a sended text message ',
@@ -20,7 +20,7 @@ const textMessageItemProps1 = {
 const textMessageItemProps2 = {
   avatar:true,
   avatarPositionClass:'message-item-recieved',
-  avatarSrc:'https://xkx9431.github.io/xkx_blog/img/xkx_eye_photo.jpg',
+  avatarSrc:'https://xkx9431.github.io/xkx_blog/img/asserts/cat.70.jpg',
   MessageContentProps:{
     msgType: 'text' as msgType,
     text:'hello man , this is the first draft version of msg elements, and this is a recieved text message',
@@ -38,11 +38,11 @@ const systemMessageItemProps = {
 
 const photoMessageItemProps = {
   avatar:true,
-  avatarPositionClass:'message-item-recieved',
-  avatarSrc:'https://xkx9431.github.io/xkx_blog/img/xkx_eye_photo.jpg',
+  avatarPositionClass:'message-item-sended',
+  avatarSrc:'https://xkx9431.github.io/xkx_blog/img/asserts/dog.128.jpg',
   MessageContentProps:{
     msgType: 'photo' as msgType,
-    src : 'https://xkx9431.github.io/xkx_blog/img/xkx_eye_photo.jpg',
+    src : 'https://xkx9431.github.io/xkx_blog/img/asserts/ai_robot1.png',
     alt : 'this is a photo alt',
     handleClick: (e: MouseEvent<HTMLElement>)=>{
       e.preventDefault();

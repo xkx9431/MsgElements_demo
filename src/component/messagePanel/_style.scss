@@ -1,8 +1,11 @@
-.msg-panel-contianer{
+.msg-panel-container{
   max-width: 600px;
-  overflow: scroll;
+  overflow-y: scroll;
   background-color: lightgray;
   .msg-item{
     margin-bottom: 10px;
   }
+}
+.msg-panel-horizontal{
+  max-width: 600px;
 }
