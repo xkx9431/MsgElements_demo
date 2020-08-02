@@ -16,7 +16,6 @@ describe( 'test Avatar compoment',()=>{
     const element  =  wrapper.container.querySelector('button') as HTMLButtonElement;
     expect(element).toBeInTheDocument()
     expect(element).toHaveClass('msg-avatar-generic')
-    expect(element.tagName).toEqual('BUTTON')
     fireEvent.click(element)
     expect(defaultProps.onAvatarClick).toHaveBeenCalled()
   })
