@@ -10,6 +10,9 @@ npm start
 ```
 本地查看demo
 
+demo :
+![messageElements.gif](https://xkx9431.github.io/xkx_blog/img/asserts/messageElements.gif)
+
 
 
 ### 项目结构
