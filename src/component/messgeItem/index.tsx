@@ -7,6 +7,4 @@ export {
   PhotoMessage,
   SystemMessage,
 }
-
 export default MessageItem
-

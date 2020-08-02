@@ -5,7 +5,7 @@ import MessageContent ,{ MessageContentProps } from './msgContent'
 import Avatar, { avatarSize } from '../avatar/avatar';
 
 
-interface MessageItemProps{
+export interface MessageItemProps{
     avatar: boolean,
     avatarSrc?:string,
     avatarPositionClass ?: string ,
@@ -33,5 +33,4 @@ const MessageItem: FC<MessageItemProps> = (props)=>{
   )
 
 }
-
 export default MessageItem

@@ -3,12 +3,10 @@ import React, { MouseEvent } from 'react';
 import Avatar from  './component/avatar'
 import MessageItem from './component/messgeItem'
 import { msgType } from './component/messgeItem/msgContent';
-// const {
-//   avatar,
-//   avatarPosition,
-//   avatarSize ,
-//   MessageContentProps
-// } = props
+import MessagePanel from './component/messagePanel'
+
+
+// testProps for each component
 const textMessageItemProps1 = {
   avatar:true,
   avatarPositionClass:'message-item-sended',
@@ -52,6 +50,19 @@ const photoMessageItemProps = {
     }
   }
 }
+
+const messagePanelProps = {
+  dataSource: [
+    textMessageItemProps1,
+    textMessageItemProps2,
+    systemMessageItemProps,
+    photoMessageItemProps
+  ]
+}
+
+
+
+
 
 
 function App() {
@@ -99,6 +110,8 @@ function App() {
         photo (recieved)
         <MessageItem {...photoMessageItemProps}/>
         <br/>
+        Message Panel
+        <MessagePanel {...messagePanelProps} />
       </div>
 
       </div>
