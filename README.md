@@ -3,6 +3,14 @@
 1. 使用了 create-react-app 脚手架工具 简单搭建了POC
 2. 使用了ts,sass
 3. 仅仅写了一个 单元测试作为demo
+4. 可以通过 
+```
+npm intsall 
+npm start 
+```
+本地查看demo
+
+
 
 ### 项目结构
 1. 组件相关内容 为`src\component` 文件件下，
