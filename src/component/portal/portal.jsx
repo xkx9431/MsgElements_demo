@@ -52,6 +52,9 @@ class Parent extends React.Component{
     handleClick() {
         console.log( this )
         this.foo();
+        this.setState( {
+            clicks: this.state.clicks + 1
+        })
     }
     render(){
         return (
