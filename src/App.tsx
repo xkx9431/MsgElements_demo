@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Parent from './component/portal'
+import Count from './component/setState_Details/demo'
 
 
 function App() {
@@ -10,9 +10,7 @@ function App() {
         react demos
       </h1>
       <br/>
-      <div className = 'modal'>
-      <Parent />
-      </div>
+      < Count/>
     </div>
   );
 }
